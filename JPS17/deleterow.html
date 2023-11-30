@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        //write JS code here
+    </script>
+
+</head>
+
+<body>
+
+    <h3>JS DOM Example To Delete Row from Table</h3>
+
+    <table id="myTable">
+
+        <tr>
+
+            <td>Row 1</td>
+
+            <td><input type="button" value="Delete Row" onclick="deleteRow(this)"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>Row 2</td>
+
+            <td><input type="button" value="Delete Row" onclick="deleteRow(this)"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>Row 3</td>
+
+            <td><input type="button" value="Delete Row" onclick="deleteRow(this)"></td>
+
+        </tr>
+
+    </table>
+
+    <br/><br/>
+
+    <font size="4"> <b><i id="msg"></i></b></font>
+
+    <script>
+        function deleteRow(r) {
+
+            var i = r.parentNode.parentNode.rowIndex;
+
+            document.getElementById("myTable").deleteRow(i);
+
+            document.getElementById("msg").innerHTML = "Row with index [" + i + "] deleted successfully";
+
+        }
+    </script>
+
+</body>
+
+</html>
